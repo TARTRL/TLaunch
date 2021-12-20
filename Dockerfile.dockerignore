@@ -1,0 +1,9 @@
+# Ignore operator, don't need this in our python image
+lp-operator/
+
+.DS_Store
+.idea
+*.log
+tmp/
+
+__pycache__/

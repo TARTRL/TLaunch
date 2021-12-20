@@ -1,0 +1,24 @@
+# permissions for end users to edit lpjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: lpjob-editor-role
+rules:
+- apiGroups:
+  - realai.cn
+  resources:
+  - lpjobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - realai.cn
+  resources:
+  - lpjobs/status
+  verbs:
+  - get

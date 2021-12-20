@@ -127,3 +127,24 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.DS_Store
+.idea
+*.log
+tmp/
+
+*.py[cod]
+*.egg
+build
+htmlcov
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+vendor/
+
+tlaunch.egg-info/

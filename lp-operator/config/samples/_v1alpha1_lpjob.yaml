@@ -1,0 +1,7 @@
+apiVersion: realai.cn/v1alpha1
+kind: LpJob
+metadata:
+  name: lpjob-sample
+spec:
+  # Add fields here
+  replicas: 4

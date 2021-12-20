@@ -1,0 +1,20 @@
+# permissions for end users to view lpjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: lpjob-viewer-role
+rules:
+- apiGroups:
+  - realai.cn
+  resources:
+  - lpjobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - realai.cn
+  resources:
+  - lpjobs/status
+  verbs:
+  - get
