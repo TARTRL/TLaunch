@@ -116,7 +116,7 @@ Check [here](./docs/k8s_usage.md) for more information.
 ### 2.存放算法代码并指定安装方法
 在多数分布式场景中，少量的代码往往会经常改动。若每次改动代码都重新构建镜像，会浪费大量的时间。因此，我们可以将这部分代码存放在```/TData/code```文件夹中。在训练中，每当一个```pods```被创建时，都将先按照```code```文件夹中的```setup.sh```脚本更新环境
 ### 3.调用TLaunch创建任务
-Check [here](./docs/tlaunch/README.md) for more information.
+Check [here](./docs/k8s_usage.md) for more information.
 ### 4.管理任务
 当任务创建完成后，我们可以调用```kubectl```来查看任务状态及日志，其中常用的几条指令包括：
   - 查看正在运行中的任务：```kubectl get lpjobs```
