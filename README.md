@@ -5,6 +5,9 @@
 
 # TLaunch: Launch Programs on Multiple Hosts
 
+
+[![Documentation Status](https://tlaunch.readthedocs.io/en/latest)](https://tlaunch.readthedocs.io/en/latest)
+
 ## Introduction
 
 [Deepmind launchpad](https://github.com/deepmind/launchpad) is a library that
