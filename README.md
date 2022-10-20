@@ -135,7 +135,7 @@ If you use TLaunch in your work, please cite us:
 ```bibtex
 @article{tartrl2021tlaunch,
     title={TLaunch: Launch Programs on Multiple Hosts},
-    author={Shiyu Huang, Sen Na, Shizhen Xu, Ting Chen, Jun Zhu},
+    author={Shiyu Huang, Sen Na, Shizhen Xu, Ting Chen, Jun Zhu, Zeming Liu},
     year={2021},
     howpublished={\url{https://github.com/TARTRL/TLaunch}},
 }
