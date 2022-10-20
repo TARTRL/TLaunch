@@ -7,6 +7,6 @@ nav:
       - Installation Guide: manual/cluster-admin/installation-guide.md
 plugins:
   - search
-site_name: OpenPAI Handbook
+site_name: TLaunch Handbook
 theme: readthedocs
 use_directory_urls: false
