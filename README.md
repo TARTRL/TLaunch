@@ -6,7 +6,7 @@
 # TLaunch: Launch Programs on Multiple Hosts
 
 
-[![Documentation Status](https://tlaunch.readthedocs.io/en/latest)](https://tlaunch.readthedocs.io/en/latest)
+[![Read the Docs](https://img.shields.io/readthedocs/tlaunch)](https://tlaunch.readthedocs.io/en/latest/)
 
 ## Introduction
 
