@@ -17,7 +17,11 @@ More information on creating LpJobs in k8s cluster are [here](./quick-start.md).
 ## Manage LpJob 
 When the task is created, we can call the ``kubectl`` command to view the task status and logs. Several commonly used commands include:
   - ```kubectl get lpjobs```
+  
   - ```kubectl get pods```
+
   - ```kubectl logs ${pod name}```
+
   - ```kubectl describe pods ${pod name}```
+
   - ```kubectl delete lpjobs ${lpjob name}```
