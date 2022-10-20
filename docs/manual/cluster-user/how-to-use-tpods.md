@@ -1,5 +1,5 @@
 # How to Use TPods
-``TPod`` is a virtual user development environment for ``TLaunch`` for distributed scenarios. After the administrator creates a user with a console(he can customize the assigned system resources,including CPU, GPU, Memory, and Storage), a `pod` named '` tpod-console' ` with the ``TLaunch`` framework will be created in the user's namespace. 
+``TPod`` is a virtual user development environment for ``TLaunch`` for distributed scenarios. After the administrator creates a user with a console(he can customize the assigned system resources,including CPU, GPU, Memory, and Storage), a `pod` named ``tpod-console`` with the ``TLaunch`` framework will be created in the user's namespace. 
 ## Login to TPod using SSH
 The user can directly log in to the machine through SSH to access the cluster to quickly enter the development process.
 ## The storage structure of TPod
@@ -22,6 +22,8 @@ When the task is created, we can call the ``kubectl`` command to view the task s
   - ```kubectl get pods```
 
   - ```kubectl logs ${pod name}```
+
+  - ```kubectl describe lpjobs ${lpjob name}```
 
   - ```kubectl describe pods ${pod name}```
 
