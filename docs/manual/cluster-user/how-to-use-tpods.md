@@ -16,6 +16,7 @@ You can create an lpjob as you would in an external environment, but note that t
 More information on creating LpJobs in k8s cluster are [here](./quick-start.md).
 ## Manage LpJob 
 When the task is created, we can call the ``kubectl`` command to view the task status and logs. Several commonly used commands include:
+
   - ```kubectl get lpjobs```
   
   - ```kubectl get pods```
