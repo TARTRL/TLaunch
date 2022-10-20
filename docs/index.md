@@ -1,15 +1,9 @@
 {!README.md!}
 
-# Welcome to Lumache's documentation!
+## Introduction
 
-**Lumache** (/lu\'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients. It pulls data from the
-[Open Food Facts database](https://world.openfoodfacts.org/) and offers
-a *simple* and *intuitive* API.
-
-Check out the [usage](usage) section for further information, including how to [install](usage#installation) the project.
-
-!!! note
-
-    This project is under active development.
-
+[Deepmind launchpad](https://github.com/deepmind/launchpad) is a library that
+helps writing distributed program in a simple way. But currently it only
+supports (or has only open-sourced) launching programs on a single host, either
+multi-threaded or multi-processed. This library provides a way of launching existing launchpad programs on multiple
+nodes. Only some simple modification to your program is needed.
