@@ -10,9 +10,9 @@ supports (or has only open-sourced) launching programs on a single host, either
 multi-threaded or multi-processed. This library provides a way of launching existing launchpad programs on multiple
 nodes. Only some simple modification to your program is needed.
 
-To learn how to create and manager your job on TLaunch, please follow our [User Manual](./manual/cluster-user/README.md).
+To learn how to create and manager your job on TLaunch, please follow our [User Manual](./manual/cluster-user/quick-start.md).
 
-To learn how to install and manage TLaunch in your cluster, please follow [Admin Manual](./manual/cluster-admin/README.md).
+To learn how to install and manage TLaunch in your cluster, please follow [Admin Manual](./manual/cluster-admin/installation-guide.md).
 
 To view a general introduction of TLaunch, please refer to the [Github Readme](https://github.com/TARTRL/TLaunch/blob/main/README.md).
 
