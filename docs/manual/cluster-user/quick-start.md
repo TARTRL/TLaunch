@@ -31,7 +31,7 @@ if __name__ == '__main__':
   app.run(main)
 ```
 In this code, we place `Worker` on `host1` and `host2` via `to_host()` function. With `lp_ssh.launch()`, 
-Each `Worker` will start to run on its corresponding hosts. Besides, [examples/mnist/run.sh](./examples/mnist/run.sh) 
+Each `Worker` will start to run on its corresponding hosts. Besides, [examples/mnist/run.sh](https://github.com/TARTRL/TLaunch/blob/main/examples/mnist/run.sh) 
 shows an example of how to train MNIST dataset on multiple hosts.
 
 ### 2. Launch programs on multiple hosts with communication
