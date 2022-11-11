@@ -14,7 +14,7 @@
 # limitations under the License.
 
 """A Launchpad program."""
-
+import argparse
 import contextlib
 import itertools
 
@@ -27,11 +27,12 @@ HandleType = Any
 class Program(object):
   """A Launchpad program."""
 
-  def __init__(self, name: str):
+  def __init__(self, name: str,all_args:argparse.Namespace):
     self._name = name
     self._groups = {}  # type: Dict[str, List[base.Node]]
     # Group to add nodes to. Used by group()
     self._current_group = None  # type: str
+    self.all_args = all_args
 
   def add_node(self,
                node: base.Node,

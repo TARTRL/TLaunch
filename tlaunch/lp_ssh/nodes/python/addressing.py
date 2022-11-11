@@ -1,11 +1,12 @@
-# Lint as: python3
-# Copyright 2020 DeepMind Technologies Limited. All rights reserved.
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright 2022 The TARTRL Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     https://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,10 +32,10 @@ def bind_addresses_local(addresses: List[lp_address.Address]):
   """Binds addresses for the local launch."""
 
   for address in addresses:
-    address.bind(lp_address.AddressBuilder())
+    address.bind(lp_address.LocalAddressBuilder())
 
 def bind_addresses_host(addresses: List[lp_address.Address]):
   """Binds addresses for the local launch."""
 
   for address in addresses:
-    address.bind(lp_address.HostAddressBuilder(address.host))
+    address.bind(lp_address.HostAddressBuilder(address.host,address.port))

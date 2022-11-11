@@ -2,11 +2,19 @@
 <img width="300px" height="auto" src="./docs/figures/tlaunch.png">
 </div>
 
+---
 
 # TLaunch: Launch Programs on Multiple Hosts
 
 
+[![PyPI](https://img.shields.io/pypi/v/tlaunch)](https://pypi.org/project/tlaunch/) 
 [![Read the Docs](https://img.shields.io/readthedocs/tlaunch)](https://tlaunch.readthedocs.io/en/latest/)
+[![GitHub issues](https://img.shields.io/github/issues/TARTRL/TLaunch)](https://github.com/TARTRL/TLaunch/issues) 
+[![GitHub stars](https://img.shields.io/github/stars/TARTRL/TLaunch)](https://github.com/TARTRL/TLaunch/stargazers) 
+[![GitHub forks](https://img.shields.io/github/forks/TARTRL/TLaunch)](https://github.com/TARTRL/TLaunch/network) 
+[![GitHub license](https://img.shields.io/github/license/TARTRL/TLaunch)](https://github.com/TARTRL/TLaunch/blob/master/LICENSE)
+
+
 
 ## Introduction
 
@@ -135,7 +143,7 @@ If you use TLaunch in your work, please cite us:
 ```bibtex
 @article{tartrl2021tlaunch,
     title={TLaunch: Launch Programs on Multiple Hosts},
-    author={Shiyu Huang, Sen Na, Shizhen Xu, Ting Chen, Jun Zhu, Zeming Liu},
+    author={Shiyu Huang, Zeming Liu, Shouren Yang, Shizhen Xu, Ting Chen, Jun Zhu, Sen Na},
     year={2021},
     howpublished={\url{https://github.com/TARTRL/TLaunch}},
 }

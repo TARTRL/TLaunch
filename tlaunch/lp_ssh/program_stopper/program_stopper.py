@@ -45,7 +45,10 @@ def make_program_stopper(launch_type: Union[str, context.LaunchType]):
 
     def ask_launcher_for_termination(mark_as_completed=False):
       del mark_as_completed
-      os.kill(launcher_process_id, signal.SIGTERM)
+      try:
+        os.kill(launcher_process_id, signal.SIGTERM)
+      except:
+        print('can\'t kill {}'.format(launcher_process_id))
 
     return ask_launcher_for_termination
 

@@ -21,6 +21,8 @@ import json
 import os
 import sys
 
+import traceback
+
 from absl import app
 from absl import flags
 from absl import logging
@@ -109,7 +111,8 @@ def main(_):
   if init_file:
     init_function = cloudpickle.load(open(init_file, 'rb'))
     init_function()
-  functions = cloudpickle.load(open(data_file, 'rb'))
+  f = open(data_file, 'rb')
+  functions = cloudpickle.load(f)
   task_id = _get_task_id()
 
   # Worker manager is used here to handle termination signals and provide
@@ -118,9 +121,22 @@ def main(_):
       register_in_thread=True)
 
   with contextlib.suppress():  # no-op context manager
-    functions[task_id]()
+    try:
+      functions[task_id]()
+  
+    except Exception as e:
+          traceback.print_exc()
+          # 或者得到堆栈字符串信息
+          # info = traceback.format_exc()
+          # s = sys.exc_info()
+          # print("Error '%s' happened on line %d" % (s[1], s[2].tb_lineno))
+          answer = input("Some thing is wrong, stop all[yes or no]?:")
+          if answer == 'yes':
+              pass
 
+import torch
 
 if __name__ == '__main__':
+  torch.multiprocessing.set_start_method('spawn')     # 多进程中使用cuda
   _populate_flags()
   app.run(main)

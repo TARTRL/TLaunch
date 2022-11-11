@@ -1,3 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright 2022 The TARTRL Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import os
 import sys
 import logging
@@ -81,7 +97,7 @@ def _get_terminal(given_terminal: Optional[Text]):
 def launch(
     programs: Union[lp_program.Program, Sequence[lp_program.Program],],
     local_resources: Optional[Dict[str, Any]] = None,
-    terminal: str = 'gnome-terminal'
+    terminal: str = 'gnome-terminal',session_name_prefix=None
 ) -> Any:
 
   if not FLAGS.is_parsed():
@@ -105,7 +121,7 @@ def launch(
         node._initialize_context(
           context.LaunchType.LOCAL_MULTI_PROCESSING,
           launch_config=launch_config)
-      if terminal == 'ssh_tmux_session':
+      elif terminal == 'ssh_tmux_session':
         node._initialize_context(
           context.LaunchType.SSH_MULTI_PROCESSING,
           launch_config=launch_config)
@@ -131,12 +147,21 @@ def launch(
     commands.extend(nodes[0].to_executables(nodes, label,
                                             nodes[0]._launch_context))
 
+
     # pytype: enable=wrong-arg-count
 
   for command in commands:
+    print("{}:{} to use python: {}".format(command.host,command.port, command.command_as_list[0]) )
     if not os.access(command.command_as_list[0], os.X_OK):
       raise ValueError("Unable to execute '%s'" % command.command_as_list[0])
-  return _LOCAL_LAUNCHER_MAP[_get_terminal(terminal)](commands)
+
+
+  terminal_name = _get_terminal(terminal)
+
+  # 通过_LOCAL_LAUNCHER_MAP字典来获取需要执行的函数
+  # 如果是terminal_name == 'ssh_tmux_session'，则使用 launch_with_ssh_tmux_session
+
+  return _LOCAL_LAUNCHER_MAP[terminal_name](commands,session_name_prefix)
 
 
 

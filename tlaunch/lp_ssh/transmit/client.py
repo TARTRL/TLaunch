@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright 2021 The TARTRL Authors.
+# Copyright 2022 The TARTRL Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -39,24 +39,6 @@ class Client(reverb.Client):
         model_values.append(episode)
 
         self.insert(data=model_values, priorities=priorities)
-
-
-    def sample_weight(self,model_keys,target_episode, table: str):
-        weight_episode = target_episode - 1
-        while weight_episode < target_episode:
-            new_values = list(self.sample(table=table, num_samples=1))[0][0].data
-            weight_episode = new_values[-1]
-
-        new_model_weight = {}
-        for i, key in enumerate(model_keys):
-            current_keys = key.split('@')
-            model_key, sub_key = current_keys[0], current_keys[1]
-            if model_key in new_model_weight:
-                new_model_weight[model_key][sub_key] = torch.tensor(new_values[i])
-            else:
-                new_model_weight[model_key] = {sub_key: torch.tensor(new_values[i])}
-        return new_model_weight
-
 
     def send_info(self,info):
       data = dumps(info)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright 2021 The TARTRL Authors.
+# Copyright 2022 The TARTRL Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,11 +30,6 @@ class Server:
         port = int(all_args.server_address.split(':')[1])
         print('Launch server at port:{}'.format(port))
         if all_args.distributed_type == "sync":
-            # data_rate_limiter = reverb.rate_limiters.Queue(all_args.actor_num)
-            # weight_rate_limiter = reverb.rate_limiters.MinSize(1)
-            # weight_max_times_sampled = all_args.actor_num
-            # data_max_size = all_args.actor_num
-
             tables = [reverb.Table(
                 name='sync_signal',
                 sampler=reverb.selectors.Uniform(),

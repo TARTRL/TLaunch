@@ -15,9 +15,23 @@
 
 """Module containing all Launchpad flags."""
 
+# from absl import flags
+# from launchpad import context
+# FLAGS = flags.FLAGS
+
 from absl import flags
-from launchpad import context
+from . import context
 FLAGS = flags.FLAGS
+
+try:
+    LP_TERMINATION_NOTICE_SECS = flags.DEFINE_integer(
+        'lp_termination_notice_secs', 10,
+        'Send termination notice to all nodes that many seconds before hard '
+        'termination. Set to 0 to trigger hard termination righ away (skip '
+        'termination notice), set to negative value to disable hard termination.')
+except:
+    pass
+
 
 
 
