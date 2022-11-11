@@ -76,17 +76,17 @@ of remote hosts. The information can be transferred via defining a `TransmitNode
 
 - Star type (see more in [examples/trans_types/star_type.py](./examples/trans_types/star_type.py)):
 <p align="center">
-<img width="300px" height="auto" src="./docs/figures/star_type.png">
+<img width="300px" height="auto" src="./docs/manual/cluster-user/imgs/star_type.png">
 </p>
 
 - Tree type (see more in [examples/trans_types/tree_type.py](./examples/trans_types/tree_type.py)):
 <p align="center">
-<img width="400px" height="auto" src="./docs/figures/tree_type.png">
+<img width="400px" height="auto" src="./docs/manual/cluster-user/imgs/tree_type.png">
 </p>
 
 - Net type (see more in [examples/trans_types/net_type.py](./examples/trans_types/net_type.py)):
 <p align="center">
-<img width="500px" height="auto" src="./docs/figures/net_type.png">
+<img width="500px" height="auto" src="./docs/manual/cluster-user/imgs/net_type.png">
 </p>
 
 ## [Optional] Kubernetes Support
