@@ -41,6 +41,7 @@ You can use ``tlaunchrun --help`` to view the details of ``tlauncherun``.
 - launch method 
 
 	The launch of distributed job, currently includes ``basic``,``torchrun``,``deepspeed``.
+	
 ### Basic Launch
 ``basic`` launch means that users use user-defined methods to transfer the model and data of distributed job, TLaunch will provide some argument that may be used to help users complete it as easily as possible.
 
