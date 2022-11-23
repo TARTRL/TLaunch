@@ -22,8 +22,8 @@ import logging
 import time
 
 import launchpad as lp
-
 from tlaunch import lp_k8s
+from tlaunch.lp_k8s.util import get_namespace
 
 
 class Worker:
@@ -48,7 +48,7 @@ class Consumer:
                    for context, producer in enumerate(self._producers)]
         results = [future.result() for future in futures]
         log.info('Results: %s', results)
-        lp_k8s.stop()
+        # lp_k8s.stop()
 
 
 def make_program(num_producers):
@@ -65,7 +65,7 @@ def make_program(num_producers):
 
 
 def main(_):
-    ns = "default"
+    ns = get_namespace()
     program = make_program(num_producers=1)
     lp_k8s.launch(program, namespace=ns)
 
