@@ -3,6 +3,7 @@ nav:
   - User Manual:
       - Quick Start: manual/cluster-user/quick-start.md
       - How to use tpods: manual/cluster-user/how-to-use-tpods.md
+      - How to Run Distributed Job: manual/cluster-user/how-to-run-distributed-job.md
   - Admin Manual:
       - Installation Guide: manual/cluster-admin/installation-guide.md
 plugins:
