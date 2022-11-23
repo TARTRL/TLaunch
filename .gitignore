@@ -132,7 +132,7 @@ dmypy.json
 .idea
 *.log
 tmp/
-
+.obsidian
 *.py[cod]
 *.egg
 build
