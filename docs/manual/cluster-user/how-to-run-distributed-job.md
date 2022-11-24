@@ -9,7 +9,7 @@
 
 In ``TLaunch``, a distributed job are named ``lpjob``.
 ## TLaunchrun Arguments
-You can use ``tlaunchrun --help`` to view the details of ``tlauncherun``.
+You can use ``tlaunchrun --help`` to view the details of ``tlaunchrun``.
 
 - ``lpjob_name`` - The name of this job.
 
@@ -45,7 +45,7 @@ You can use ``tlaunchrun --help`` to view the details of ``tlauncherun``.
 ### Basic Launch
 ``basic`` launch means that users use user-defined methods to transfer the model and data of distributed job, TLaunch will provide some argument that may be used to help users complete it as easily as possible.
 
-- ``num_trainer`` - The number of trainer, TLaunch will create pods equal to it.
+- ``num_trainer`` - The number of trainer, TLaunch will create pods equal to it. TLaunch will add argument ``world_size`` and ``rank`` for every pods.
   
 - ``set_share_file`` - Whether to automatically set a cache file for transferring distributed shared information, if use this option, TLaunch will generate pointing to this file.
 
