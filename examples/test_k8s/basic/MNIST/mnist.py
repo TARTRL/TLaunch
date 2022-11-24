@@ -191,7 +191,7 @@ def main():
             test(model, device, test_loader)
         scheduler.step()
 
-    if args.save_model:
+    if args.save_path != '':
         if args.distributed:
             if dist.get_rank() == 0:
                 # only save model on RANK0 process.
