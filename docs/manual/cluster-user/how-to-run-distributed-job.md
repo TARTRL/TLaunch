@@ -49,7 +49,7 @@ You can use ``tlaunchrun --help`` to view the details of ``tlaunchrun``.
   
 - ``set_share_file`` - Whether to automatically set a cache file for transferring distributed shared information, if use this option, TLaunch will generate pointing to this file.
 
-[examples](https://github.com/TARTRL/TLaunch/blob/main/examples/test_k8s/basic) gives some examples of use basic launcher to run a distributed job in TLaunch.
+[examples](https://github.com/TARTRL/examples/tree/main/basic) gives some examples of use basic launcher to run a distributed job in TLaunch.
 ### Torchrun Launch
 ``torchrun`` is a distributed job launcher provided by pytorch.It is mentioned in the official documents of pytorch that `torchrun` provides a superset of the functionality as `torch.distributed.launch` with the following additional functionalities:
 
@@ -59,10 +59,10 @@ You can use ``tlaunchrun --help`` to view the details of ``tlaunchrun``.
 
 3.  Number of nodes is allowed to change between minimum and maximum sizes (elasticity).
 
-[examples](https://github.com/TARTRL/TLaunch/blob/main/examples/test_k8s/torchrun) gives some examples of use torchrun launcher to run a distributed job in TLaunch.
+[examples](https://github.com/TARTRL/examples/tree/main/torchrun) gives some examples of use torchrun launcher to run a distributed job in TLaunch.
 ### Deepspeed Launch
 ``deepspeed`` is a lightweight wrapper on PyTorch. It contains many distributed training techniques, such as distributed training, mixed precision, gradient accumulation, and checkpoints so that you can focus on your model development. 
 
-[examples](https://github.com/TARTRL/TLaunch/blob/main/examples/test_k8s/deepspeed) gives some examples of use deepspeed launcher to run a distributed job in TLaunch.
+[examples](https://github.com/TARTRL/examples/tree/main/deepspeed) gives some examples of use deepspeed launcher to run a distributed job in TLaunch.
 
 
