@@ -59,7 +59,7 @@ of remote hosts. The information can be transferred via defining a `TransmitNode
 After running the operator in the kubernetes cluster, you should be able to use
 `lp_k8s` to deploy some launchpad program. Below is a very simple
 ### 1.Basic Example
-[test_worker_comsumer.py](https://github.com/TARTRL/examples/blob/main/quick_start/test_worker_comsumer.py) gives an example of worker and consumer , modified from the `consumer_producer` example on Deepmind launchpad's
+[test_worker_comsumer.py](https://github.com/TARTRL/examples/blob/main/examples/quick_start/test_worker_consumer.py) gives an example of worker and consumer , modified from the `consumer_producer` example on Deepmind launchpad's
 [github main page](https://github.com/deepmind/launchpad#implement-example-nodes).
 
 ``` python
@@ -138,7 +138,7 @@ Basically if you know how to write launchpad program, this is almost exactly the
 same.
 
 ### 2.Use GPU
-We can customize the configuration information by adding a config object for node. For [example](https://github.com/TARTRL/examples/blob/main/quick_start/test_gpu.py), when we want to apply gpu resources for node, we can refer to the following example.
+We can customize the configuration information by adding a config object for node. For [example](https://github.com/TARTRL/examples/blob/main/examples/quick_start/test_gpu.py), when we want to apply gpu resources for node, we can refer to the following example.
 
 ```python
 import sys  
