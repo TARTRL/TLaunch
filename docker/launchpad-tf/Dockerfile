@@ -1,4 +1,4 @@
-FROM python:3.7.0
+FROM python:3.10.11
 MAINTAINER Sen Na <sen.na@realai.ai>
 
 WORKDIR /code
