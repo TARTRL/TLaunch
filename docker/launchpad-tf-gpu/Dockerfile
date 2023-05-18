@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.5.1-gpu
+FROM tensorflow/tensorflow:2.13.0rc0-gpu
 MAINTAINER Sen Na <sen.na@realai.ai>
 
 WORKDIR /code
