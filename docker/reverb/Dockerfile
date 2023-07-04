@@ -1,4 +1,4 @@
-FROM python:3.8.10
+FROM python:3.8
 MAINTAINER Sen Na <sen.na@realai.ai>
 
 ARG pip_registry='https://mirrors.aliyun.com/pypi/simple/'
